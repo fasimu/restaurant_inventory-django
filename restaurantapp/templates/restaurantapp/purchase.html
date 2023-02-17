@@ -1,0 +1,34 @@
+{% extends 'restaurantapp/base.html' %}
+{% load static %}
+
+{% block content %}
+<br></br>
+<div class = "container">
+    <a href="{% url 'add_purchase' %}">Record New Purchase</a>
+</div>
+
+<br></br>
+<div class = "container">
+    <h1 class= "text-center">PURCHASE LOG</h1>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Time</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for purchase in object_list %}
+            <tr>
+                <td>{{ purchase.menu_item.title }}</td>
+                <td class="price">${{ purchase.menu_item.price|stringformat:".2f" }}</td>
+                <td>{{ purchase.timestamp }}</td>    
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</script>
+</div>
+
+{% endblock %}

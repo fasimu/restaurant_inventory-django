@@ -1,0 +1,32 @@
+{% extends 'restaurantapp/base.html'%} 
+
+{% load static %}
+{% block content%}
+<br></br>
+
+<div>
+    <h1 class= "text-center">Purchases log</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Menu Item</th>
+                <th scope="col">Price</th>
+                <th scope="col">Time</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for prcse in purchases %}
+            <tr>
+                <td>{{ prcse.menu_item.title }}</td>
+                <td class="price">${{ prcse.menu_item.price|stringformat:".2f" }}</td>
+                <td>{{ prcse.timestamp }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <hr/>
+    <h2 class= "text-left">Totals</h2>
+    <p1 style="color: green;">Total Revenue: ${{ revenue|stringformat:".2f" }}</p1>
+    <p1 style="color: red;">Total Cost: ${{ total_cost|stringformat:".2f" }}</p1>
+    <p1 style="color: blue;">Total Profit: ${{ profit|stringformat:".2f" }}</p1>
+{% endblock %}

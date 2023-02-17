@@ -1,0 +1,40 @@
+{% extends 'restaurantapp/base.html' %}
+{% load static %}
+
+{% block content %}
+<br></br>
+<div class = "container">
+    <a href="{% url 'add_ingredient' %}">Add New Ingredient</a>
+</div>
+
+<br></br>
+<div class = "container">
+    <h1 class= "text-center">INGREDIENT STOCK</h1>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Unit</th>
+            <th scope="col">Unit Price</th>
+            </tr>
+        </thead>
+        {% for ingredient in ingredient_list %}
+        <tbody>
+            <tr>
+            <td>
+                <a href="{% url 'update_ingredient' ingredient.id %}">{{ ingredient.name }}</a>
+            </td>    
+
+            <td>{{ingredient.qty}}</td>
+            <td>{{ingredient.unit}}</td>
+            <td class="price">${{ ingredient.unit_price|stringformat:".2f" }}</td>
+
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+</script>
+</div>
+
+{% endblock %}

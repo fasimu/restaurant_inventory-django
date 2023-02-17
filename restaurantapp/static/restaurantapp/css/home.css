@@ -1,0 +1,74 @@
+body, html {
+    /* height: 100%; */
+    margin: 0;
+    font-family: 'raleway';
+  }
+
+* {
+    box-sizing: border-box;
+}
+  
+.bg-image {
+    /* Full height */
+    width: 100% !important;
+    height: 100%;
+    opacity: 0.5;
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover !important;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: auto;
+  padding: 20px;
+  text-align: center;
+}
+ 
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: auto;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 5px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+  
+.fa:hover {
+    opacity: 0.7;
+}
+  
+.fa-facebook {
+    /* background: #000000; */
+    color: white;
+}
+  
+.fa-twitter {
+    /* background: #000000; */
+    color: white;
+}
+ 
+.fa-instagram {
+    /* background: #000000; */
+    color: white;
+}
+  
+.fa-whatsapp {
+    /* background: #000000; */
+    color: white;
+}

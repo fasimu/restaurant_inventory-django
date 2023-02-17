@@ -1,0 +1,17 @@
+{% extends 'restaurantapp/base.html'%} 
+
+{% load static %}
+{% block content%}
+<br></br>
+
+<div class="container">
+    <form method="post">
+
+        <p>Are you sure you want to delete "{{ object.title }}"?</p>
+        {% csrf_token %}
+        <a href="{% url 'menu' %}" class="btn btn-secondary btn" type="button">Cancel</a>
+        <input type="submit" value="Delete" class="btn btn-secondary btn" type="button">
+
+    </form>
+</div>
+{% endblock %}

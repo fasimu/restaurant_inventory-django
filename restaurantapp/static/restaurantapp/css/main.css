@@ -1,0 +1,134 @@
+html,body {
+    position: relative;
+    overflow-x: auto;
+    width: 100% !important;
+    height: 100vh;
+    display: table;
+    position: relative;
+    background-position: center;
+    background-attachment: scroll;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+  
+body{
+      background-color: hsl(0, 0%, 98%);
+      font-family: 'raleway';
+ }
+    
+
+form {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.login-form {
+    align-self: center;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.login-form form .errorlist {
+    color: red;
+}
+
+.navbar {
+    background-color: #204022;
+}
+
+.navbar li a {
+    font-size: 15px;
+}
+
+.navbar-brand {
+    font-size: 30px !important;
+}
+
+.container {
+    padding: 10px;
+    width: 90%;
+}
+
+@media(max-width: 767px){
+    form { 
+        width: 90%;
+    }
+}
+
+hr {
+    margin: 20px 10px;
+}
+
+h2 {
+    margin: 20px 10px;
+}
+
+p1 {
+    margin: 20px 10px;
+}
+
+main table {
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    width: 80%;
+    margin: 1em;
+    display: inline-block;
+    overflow-x: auto;
+}
+
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: space-evenly;
+}
+
+.menu-items * {
+    padding: 0;
+}
+
+.menu-items > li {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid grey;
+    margin: 1em;
+    border-radius: 10px;
+    justify-content: left;
+    flex-basis: 45%;
+}
+
+.menu-items, .menu-items ul {
+    list-style-type: none;
+}
+
+.menu-item-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.5em;
+}
+
+.menu-item-title {
+    font-weight: bold;
+}
+
+.menu-item-ingredients {
+    padding: 20px 0;
+}
+
+.menu-item-ingredients * {
+    padding: 5px 0;
+}
+
+.fa-sign-out {
+    /* background: #000000; */
+    color: white;
+}
